@@ -1,0 +1,29 @@
+#Firebase in the web
+1.go to firebase website.
+  -create a project, add authentication
+  -create a realtime database 
+2. npm install firebase and react-router-dom in the project location
+  - copy the configuration from web and create a file in src as firebase.js and past he config
+  -import and export auth and database
+    {   import "firebase/auth";
+        import "firebase/database";
+
+        export const auth=firebase.auth();
+        export const database=firebase.database();
+    }
+
+3. create helper folder in the project and file auth.js in it
+  -add this in it
+   {
+        import {auth} from "../firebase"
+
+        export function signup(email,password){
+            return auth.createUserWithEmailAndPassword(email,password);
+        }
+        export function signin(email,passsword){
+            return auth.signInWithEmailAndPassword(email,password);
+        }
+        export function logout(){
+            auth.signOut();
+        }
+   }
