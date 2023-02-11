@@ -7,7 +7,7 @@ function NavBar(prpos){
    
     return(
         <div>
-            <div class="container">
+            <div className="container">
                 <Link to="/"><h3>Chat App</h3></Link>
                 <div>
                     <div>
