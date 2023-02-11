@@ -21,4 +21,7 @@ export function pwriteMsg(id,user1,user2){
         user2:user2
     })
 }
+export function addFrnd(frnd,id){
+    database.ref("pmsgs").get()
+}
  
